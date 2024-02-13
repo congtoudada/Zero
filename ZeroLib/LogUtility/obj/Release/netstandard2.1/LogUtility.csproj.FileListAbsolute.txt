@@ -1,0 +1,12 @@
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\bin\Release\netstandard2.1\LogUtility.deps.json
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\bin\Release\netstandard2.1\LogUtility.dll
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\bin\Release\netstandard2.1\LogUtility.pdb
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\bin\Release\netstandard2.1\log4net.dll
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\bin\Release\netstandard2.1\UnityEngine.dll
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\obj\Release\netstandard2.1\LogUtility.csproj.AssemblyReference.cache
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\obj\Release\netstandard2.1\LogUtility.AssemblyInfoInputs.cache
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\obj\Release\netstandard2.1\LogUtility.AssemblyInfo.cs
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\obj\Release\netstandard2.1\LogUtility.csproj.CoreCompileInputs.cache
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\obj\Release\netstandard2.1\LogUtility.csproj.CopyComplete
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\obj\Release\netstandard2.1\LogUtility.dll
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\LogUtility\obj\Release\netstandard2.1\LogUtility.pdb

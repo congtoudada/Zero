@@ -1,0 +1,11 @@
+{
+    "name": "com.beetlecircus.yamldotnet",
+    "displayName": "YamlDotNet for Unity",
+    "author": { "name": "Beetle Circus", "url": "https://beetlecircus.com/" },
+    "version": "12.3.1",
+    "unity": "2020.3",
+    "description": "Manual and reflection based YAML serialization.",
+    "keywords": [ "yaml", "yamldotnet", "yamldotnet for unity"],
+    "category": "Yaml",
+    "dependencies": {}
+}

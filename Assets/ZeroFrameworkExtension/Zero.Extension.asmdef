@@ -1,0 +1,17 @@
+{
+    "name": "Zero.Extension",
+    "rootNamespace": "",
+    "references": [
+        "GUID:718ceaecd8765e04ca5665b1c32d24c1",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/ZeroFramework/2.Utility/Code/NodeEditor/Editor/USS/NodeView.uss?fileID=7433441132597879392&amp;guid=43e6c7dcf519f944abb641d45e87c1f3&amp;type=3#NodeView" />
+    <ui:VisualElement name="Background" focusable="true" style="flex-grow: 1;">
+        <ui:VisualElement name="Head" style="flex-grow: 1;">
+            <ui:VisualElement name="input" class="port" style="left: 3%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Body" style="flex-grow: 1; flex-basis: 50%;">
+            <ui:VisualElement name="divider" />
+            <ui:VisualElement name="Title" style="flex-grow: 1;">
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="title-label" class="label" style="flex-grow: 1;" />
+                <ui:Label text="Label" name="description" class="label" style="flex-grow: 1; -unity-font-style: italic;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="divider" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Tail" style="flex-grow: 1;">
+            <ui:VisualElement name="output" class="port" style="right: 3%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="NodeState" picking-mode="Ignore" class="transition-image" style="transition-property: opacity; position: absolute; left: 0; top: 0; right: 0; bottom: 0; border-left-color: rgb(99, 238, 96); border-right-color: rgb(99, 238, 96); border-top-color: rgb(99, 238, 96); border-bottom-color: rgb(99, 238, 96); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;" />
+</ui:UXML>

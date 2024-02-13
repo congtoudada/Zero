@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072dbc29cc9571147a6920c792ef7870, type: 3}
+  m_Name: DialogueTree
+  m_EditorClassIdentifier: 
+  asset: {fileID: 11400000}
+  runningNode: {fileID: 0}
+  currentState: 0
+  nodes:
+  - {fileID: 2128898028363998133}
+  - {fileID: 3731035846549821095}
+  rootNode: {fileID: 2128898028363998133}
+  treeState: 0
+  createID: 2
+--- !u!114 &2128898028363998133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6df81251b18324c8fa2573dffaad1c, type: 3}
+  m_Name: SingleDialogue0
+  m_EditorClassIdentifier: 
+  asset: {fileID: 2128898028363998133}
+  type: 0
+  guid: db8899b1e01fc874d853cd8e2ccae258
+  position: {x: 137.34128, y: -30.501972}
+  description: description
+  child: {fileID: 3731035846549821095}
+  content: Hello
+--- !u!114 &3731035846549821095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25bef576330a53b47aed9ec79f93bf26, type: 3}
+  m_Name: BranchDialogue1
+  m_EditorClassIdentifier: 
+  asset: {fileID: 3731035846549821095}
+  type: 1
+  guid: 320ea74163b7d5844999bb252cd52ceb
+  position: {x: 151.33344, y: 180.50197}
+  description: description
+  children: []

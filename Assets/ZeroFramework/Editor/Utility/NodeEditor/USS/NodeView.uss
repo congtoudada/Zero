@@ -1,0 +1,109 @@
+#divider {
+    border-top-color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+#title-label {
+    -unity-font-style: bold;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.label {
+    -unity-text-align: middle-center;
+    margin-top: 0;
+    margin-right: 5px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    -unity-font-style: normal;
+    font-size: 12px;
+}
+
+#Background {
+    background-color: rgb(60, 60, 60);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    min-width: 150px;
+}
+
+#Background:hover {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+}
+
+#Background:focus {
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}
+
+#Background:hover:focus {
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+}
+
+.single2single {
+    background-color: rgb(86, 196, 236);
+}
+
+.many2many {
+    background-color: rgb(243, 153, 58);
+}
+
+.single2many {
+    background-color: rgb(143, 52, 48);
+}
+
+.many2single {
+    background-color: rgb(1, 73, 70);
+}
+
+.port {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+#Head {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.transition-image {
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    opacity: 0;
+}
+
+.running {
+    opacity: 1;
+}

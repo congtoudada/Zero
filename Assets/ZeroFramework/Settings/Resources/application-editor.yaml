@@ -1,0 +1,2 @@
+INCLUDE:
+ - ${Streaming}/zero/configs/template-editor.yaml

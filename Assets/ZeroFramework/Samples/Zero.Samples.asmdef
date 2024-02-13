@@ -1,0 +1,17 @@
+{
+    "name": "Zero.Samples",
+    "rootNamespace": "Zero.Samples",
+    "references": [
+        "GUID:718ceaecd8765e04ca5665b1c32d24c1",
+        "GUID:e34a5702dd353724aa315fb8011f08c3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
