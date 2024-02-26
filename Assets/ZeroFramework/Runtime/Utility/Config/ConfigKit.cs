@@ -77,7 +77,7 @@ namespace Zero.Utility
         }  
         
         #region 实现IConfigKit
-        public IConfigKit Init(ConfigInfo configInfo)
+        public IConfigKit Equip(ConfigInfo configInfo)
         {
             switch (configInfo.loadMethod)
             {
@@ -94,11 +94,11 @@ namespace Zero.Utility
             return this;
         }
 
-        public IConfigKit Init(List<ConfigInfo> configInfoList)
+        public IConfigKit Equip(List<ConfigInfo> configInfoList)
         {
             foreach(var configInfo in configInfoList)
             {
-                Init(configInfo);
+                Equip(configInfo);
             }
             return this;
         }

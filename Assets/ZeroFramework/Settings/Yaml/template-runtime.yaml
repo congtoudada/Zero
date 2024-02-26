@@ -1,0 +1,5 @@
+utility:
+ log:
+  log4net:
+   config: ${Streaming}/zero/configs/log4net.config
+   output: ${Streaming}/zero/logs

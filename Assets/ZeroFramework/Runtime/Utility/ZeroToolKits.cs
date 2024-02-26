@@ -22,7 +22,7 @@ namespace Zero.Utility
     {
         private ZeroToolKits()
         {
-
+            
         }
         
         #region Config
@@ -33,6 +33,7 @@ namespace Zero.Utility
                 if (_g == null)
                 {
                     _g = new ConfigKit(); //2024年2月13日02:08:00
+                    _g.Equip(new ConfigInfo("application-runtime", ConfigInfo.LoadEnum.YAML));
                 }
                 return _g;
             }

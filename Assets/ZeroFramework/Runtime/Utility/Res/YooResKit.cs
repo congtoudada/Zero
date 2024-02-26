@@ -14,7 +14,7 @@ using YooAsset;
 
 namespace Zero.Utility
 {
-    public class YooResKit : Singleton<YooResKit>, IYooResKit
+    public class YooResKit : SingletonMono<YooResKit>, IYooResKit
     {
         private TypeEventSystem _typeEventSystem = new TypeEventSystem();
 
@@ -23,6 +23,10 @@ namespace Zero.Utility
 
         private YooResKit()
         {
+            //2024年2月14日14:42:18
+            //需求：先加载完配置，再运行其他逻辑
+            // PatchInfo info = new PatchInfo(EPlayMode.OfflinePlayMode, "ZeroRawPackage"); //加载本地配置
+            // Init(info);
         }
 
         public IEnumerator Init(PatchInfo patchInfo)

@@ -59,10 +59,10 @@ namespace Zero.Samples
             Debug.Log("json: " + json);
             Debug.Log("yaml: " + yaml);
             
-            //写入文本
-            string json_path = "Assets/ZeroFramework/Utility/Example/File/Save/test_json.json";
+            //写入文本 
+            string json_path = Path.Combine(Application.dataPath, "ZeroFramework/Samples/Utility/File/Example/test_json.json");;
             fileKit.TextTool.Write(json_path, json);
-            string yaml_path = "Assets/ZeroFramework/Utility/Example/File/Save/test_yaml.yaml";
+            string yaml_path = Path.Combine(Application.dataPath, "ZeroFramework/Samples/Utility/File/Example/test_yaml.yaml");
             fileKit.TextTool.WriteAsync(yaml_path, yaml, null);
             #if UNITY_EDITOR
             AssetDatabase.Refresh();
@@ -114,7 +114,7 @@ namespace Zero.Samples
             });
             
             string imageUri_local =
-                Path.Combine(Application.streamingAssetsPath, "zero", "example", "Hollow.jpg");
+                Path.Combine(Application.dataPath, "ZeroFramework/Samples/Utility/File/Example/Hollow.jpg");
             yield return fileKit.ImageTool.ReadFromUri(imageUri_local, sprite =>
             {
                 if (sprite != null)

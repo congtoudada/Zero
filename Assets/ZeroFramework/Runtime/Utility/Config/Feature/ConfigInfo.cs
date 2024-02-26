@@ -18,8 +18,8 @@ namespace Zero.Utility
             YAML,
             JSON
         }
-        public string location;
-        public LoadEnum loadMethod;
+        public string location; //配置文件位置
+        public LoadEnum loadMethod; //加载方式
 
         public ConfigInfo(string location, LoadEnum loadMethod)
         {

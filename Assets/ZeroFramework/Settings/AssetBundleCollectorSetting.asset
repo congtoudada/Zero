@@ -16,7 +16,36 @@ MonoBehaviour:
   ShowEditorAlias: 0
   UniqueBundleName: 1
   Packages:
-  - PackageName: TestPackage
+  - PackageName: ZeroPackage
+    PackageDesc: 
+    EnableAddressable: 0
+    LocationToLower: 0
+    IncludeAssetGUID: 0
+    IgnoreDefaultType: 1
+    AutoCollectShaders: 1
+    Groups: []
+  - PackageName: ZeroRawPackage
+    PackageDesc: 
+    EnableAddressable: 0
+    LocationToLower: 0
+    IncludeAssetGUID: 0
+    IgnoreDefaultType: 1
+    AutoCollectShaders: 1
+    Groups:
+    - GroupName: Yaml
+      GroupDesc: "Yaml\u914D\u7F6E"
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/ZeroFramework/Settings/Yaml
+        CollectorGUID: b1e038cd165b7d847b9c93960821aef0
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackSeparately
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+  - PackageName: ZeroExamplePackage
     PackageDesc: 
     EnableAddressable: 1
     LocationToLower: 0
@@ -25,7 +54,7 @@ MonoBehaviour:
     AutoCollectShaders: 1
     Groups:
     - GroupName: Entity
-      GroupDesc: "\u9884\u5236\u4F53"
+      GroupDesc: "\u9884\u5236\u4F53\u6F14\u793A"
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
@@ -38,7 +67,7 @@ MonoBehaviour:
         AssetTags: 
         UserData: 
     - GroupName: Material
-      GroupDesc: "\u6750\u8D28"
+      GroupDesc: "\u6750\u8D28\u6F14\u793A"
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
@@ -51,7 +80,7 @@ MonoBehaviour:
         AssetTags: 
         UserData: 
     - GroupName: First
-      GroupDesc: "\u9996\u5305"
+      GroupDesc: "\u9996\u5305\u6F14\u793A"
       AssetTags: First
       ActiveRuleName: EnableGroup
       Collectors:
@@ -63,7 +92,7 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
-  - PackageName: TestRawPackage
+  - PackageName: ZeroRawExamplePackage
     PackageDesc: 
     EnableAddressable: 1
     LocationToLower: 0
@@ -72,7 +101,7 @@ MonoBehaviour:
     AutoCollectShaders: 1
     Groups:
     - GroupName: Video
-      GroupDesc: "\u89C6\u9891"
+      GroupDesc: "\u89C6\u9891\u6F14\u793A"
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:

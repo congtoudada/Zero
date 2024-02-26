@@ -20,13 +20,13 @@ namespace Zero.Utility
         /// 初始化配置，最终会整合成一套配置
         /// </summary>
         /// <param name="configInfo"></param>
-        IConfigKit Init(ConfigInfo configInfo);
+        IConfigKit Equip(ConfigInfo configInfo);
         
         /// <summary>
         /// 根据List顺序，初始化配置,，最终会整合成一套配置
         /// </summary>
         /// <param name="configInfoList"></param>
-        IConfigKit Init(List<ConfigInfo> configInfoList);
+        IConfigKit Equip(List<ConfigInfo> configInfoList);
         
         /// <summary>
         /// 获取值，由字符串访问配置 (格式："a.b.c")
