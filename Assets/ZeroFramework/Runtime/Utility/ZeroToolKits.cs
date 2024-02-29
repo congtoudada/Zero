@@ -5,6 +5,8 @@
   日期：2023/11/22 14:25:26
   功能：打包时建议使用 [ZERO_RELEASE] 
 *****************************************************/
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,6 +14,7 @@ using System.IO;
 using System.Linq;
 using log4net;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 namespace Zero.Utility
 {
@@ -32,13 +35,85 @@ namespace Zero.Utility
             {
                 if (_g == null)
                 {
-                    _g = new ConfigKit(); //2024年2月13日02:08:00
-                    _g.Equip(new ConfigInfo("application-runtime", ConfigInfo.LoadEnum.YAML));
+                    try
+                    {
+                        _g = new ConfigKit();
+                        //加载项目默认配置
+                        string zeroConfigPath = Path.Combine(Application.streamingAssetsPath, "Zero", "Configs", "application-runtime.yaml");
+                        if (!System.IO.File.Exists(zeroConfigPath))
+                        {
+                            //此时本地配置还没加载，不可使用Log模块，否则会“死锁”
+                            UnityEngine.Debug.LogWarning("找不到Zero根配置: " + zeroConfigPath);
+                            _g = null;
+                        }
+                        else
+                        {
+                            _g.Equip(_g.CreateConfigInfo(zeroConfigPath, ConfigInfo.FileType.YAML, ConfigInfo.LoadType.UNITY_WEB_REQUEST));
+                            InnerLog.LogOnce("默认配置加载完毕: " + _g, typeof(ZeroToolKits));
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogError("[ Zero ] _G初始化失败: " + e.StackTrace);
+                        _g = null;
+                    }
+                    
                 }
                 return _g;
             }
         }
         private IConfigKit _g;
+#if UNITY_EDITOR
+        public IConfigKit _EG
+        {
+            get
+            {
+                if (_eg == null)
+                {
+                    try
+                    {
+                        _eg = new ConfigKit();
+                        //加载项目默认配置
+                        string zeroConfigPath = Path.Combine(Application.streamingAssetsPath, "Zero", "Configs", "application-editor.yaml");
+                        if (!System.IO.File.Exists(zeroConfigPath))
+                        {
+                            //此时本地配置还没加载，不可使用Log模块，否则会“死锁”
+                            UnityEngine.Debug.LogWarning("找不到Zero Editor根配置: " + zeroConfigPath);
+                            _eg = null;
+                        }
+                        else
+                        {
+                            var info = _eg.CreateConfigInfo(zeroConfigPath, ConfigInfo.FileType.YAML,
+                                ConfigInfo.LoadType.UNITY_WEB_REQUEST);
+                            _eg.Equip(info);
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogError("[ Zero ] _EG初始化失败: " + e.StackTrace);
+                        _g = null;
+                    }
+                }
+                return _eg;
+            }
+        }
+        private IConfigKit _eg;
+#endif
+        #endregion
+        
+        #region File
+        public IFileKit File
+        {
+            get
+            {
+                if (_file == null)
+                {
+                    _file = new FileKit();
+                }
+                return _file;
+            }
+        }
+        private IFileKit _file;
         #endregion
         
         #region Log
@@ -54,7 +129,7 @@ namespace Zero.Utility
                     #if ZERO_RELEASE || DISABLE_LOG
                         _logKit = new LogKit(loggerFactory, false);
                     #else
-                    _zeroLogK = new LogKit(loggerFactory);
+                        _zeroLogK = new LogKit(loggerFactory);
                     #endif
                 }
                 return _zeroLogK;
@@ -78,19 +153,9 @@ namespace Zero.Utility
         private ILogKit _zeroLogK;
         #endregion
         
-        #region File
-        public IFileKit File
-        {
-            get
-            {
-                if (_file == null)
-                {
-                    _file = new FileKit();
-                }
-                return _file;
-            }
-        }
-        private IFileKit _file;
+        #region Path
+
+        public IPathKit PathHelper => PathKit.Instance;
         #endregion
         
         #region Pool
@@ -108,6 +173,33 @@ namespace Zero.Utility
         private IPoolKit _pool;
         #endregion
         
+        #region Res
+        public IYooResKit YooRes => YooResKit.Instance;
+        #endregion
+        
+        #region Storage
+        public ISimpleStorageKit Storage
+        {
+            get
+            {
+                if (_storage == null)
+                {
+                    _storage = new SimpleStorageKit(SimpleStorageInfo.StorageMethod.PLAYER_PREFS);
+                }
+                return _storage;
+            }
+        }
+        private ISimpleStorageKit _storage;
+        #endregion
+        
+        #region String
+        public StringKit Str => StringKit.Instance;
+        #endregion
+        
+        #region Timer
+        public ITimerKit Timer = TimerKit.Instance;
+        #endregion
+        
         #region Timestamp
         public ITimestampKit Timestamp
         {
@@ -123,22 +215,8 @@ namespace Zero.Utility
         private ITimestampKit _timestamp;
         #endregion
         
-        #region Timer
-        public ITimerKit Timer = TimerKit.Instance;
-        #endregion
-        
         #region UniEvent
         public IUniEventKit UniEvent = UniEventKit.Instance;
-        #endregion
-
-        #region Res
-        public IYooResKit YooRes => YooResKit.Instance;
-        #endregion
-        
-        #region String
-
-        public StringKit Str => StringKit.Instance;
-
         #endregion
 
     }

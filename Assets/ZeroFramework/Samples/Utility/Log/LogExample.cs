@@ -8,6 +8,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using log4net;
 using UnityEditor;
 using UnityEngine;
@@ -23,6 +24,7 @@ namespace Zero.Samples
     {
       // 获取日志工具
       var logKit = ZeroToolKits.Instance.UserLog;
+      var innerLogKit = ZeroToolKits.Instance.InnerLog;
       // 1.直接打印日志
       logKit.Debug("直接调用", typeof(LogExample));
       // 2.使用logger打印日志
@@ -45,7 +47,7 @@ namespace Zero.Samples
       logger.Debug("WARN等级，无法打印Debug内容"); //不打印
       logger.SetLevelLimit(LogLevel.DEBUG); //或者直接设置当前logger
       logger.Debug("DEBUG等级，可以打印Debug内容");
-
+      
       // 日志开关
       logKit.SetEnable(true);
     }

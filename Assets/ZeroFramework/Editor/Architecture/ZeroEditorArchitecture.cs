@@ -8,6 +8,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zero.Utility;
 
 namespace Zero.Editor
 {
@@ -18,7 +19,7 @@ namespace Zero.Editor
     {
         protected override void Init()
         {
-            
+            this.RegisterUtility<ZeroToolKits>(ZeroToolKits.Instance);
         }
     }
 }

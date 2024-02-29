@@ -36,15 +36,7 @@ MonoBehaviour:
       GroupDesc: "Yaml\u914D\u7F6E"
       AssetTags: 
       ActiveRuleName: EnableGroup
-      Collectors:
-      - CollectPath: Assets/ZeroFramework/Settings/Yaml
-        CollectorGUID: b1e038cd165b7d847b9c93960821aef0
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackSeparately
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
+      Collectors: []
   - PackageName: ZeroExamplePackage
     PackageDesc: 
     EnableAddressable: 1
