@@ -1,0 +1,15 @@
+﻿/****************************************************
+  文件：$FILENAME$.cs
+  作者：$AUTHOR$
+  邮箱：$EMAIL$
+  日期：$DATETIME$
+  功能：$DESCRIPTION$
+*****************************************************/
+namespace $NAME_SPACE$
+{
+    $CLASS$
+    {
+        //Field Begin
+        //Field End
+    }
+}
